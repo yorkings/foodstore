@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="{% static 'main.css' %}" rel="stylesheet">
+    <script src="{% static 'app.js' %}" type="text/javascript"></script>
+</head> 
+<body>
+    <section class="header">
+        <div>
+            <img class="logo" src="{% static 'image/logo.png' %}">
+        </div>
+        <div class="navbar">
+            <nav>
+                <a href="{% url 'home' %}" class="active">HOME</a>
+                <a href="{% url 'product_detail' product_id=product.id %}">DISHES</a>
+                <a href="#about">ABOUT</a>
+                <a href="#menu">MENU</a>
+                <a href="{% url 'cart' %}">ORDER</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </div>
+        <div>
+            <a href="#">logout</a>
+        </div>
+    </section>
+</body>
+</html>
